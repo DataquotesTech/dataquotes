@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useRef } from "react";
-import { hostGrotesk, martianMono } from "@/app/layout";
+import { hostGrotesk, martianMono } from "@/app/fonts";
 
 const CourseHighlights = () => {
   const benefits = [

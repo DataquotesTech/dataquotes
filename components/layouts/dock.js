@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { martianMono } from "../../app/layout";
+import { martianMono } from "../../app/fonts";
 
 export default function Dock() {
   const [page, setPage] = useState("edtech");

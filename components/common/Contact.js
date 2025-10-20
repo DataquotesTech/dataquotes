@@ -1,20 +1,24 @@
 "use client";
 
-import { hostGrotesk, martianMono } from "@/app/layout";
+import { hostGrotesk, martianMono } from "@/app/fonts";
 import { useEffect, useState } from "react";
 
 export default function ContactPage() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInteractive, setIsInteractive] = useState(false);
+  
 
   useEffect(() => {
     // Add a small delay to ensure the iframe loads properly
     const timer = setTimeout(() => {
       setIsLoaded(true);
-    }, 1000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
+  if (!isLoaded) {
+    return <div className="h-screen w-full flex justify-center items-center pt-45 bg-black"></div>
+  }
 
   return (
     <div
@@ -36,7 +40,7 @@ export default function ContactPage() {
         <div className="relative" onMouseLeave={() => setIsInteractive(false)}>
           {!isLoaded && (
             <div className="flex justify-center items-center h-96  rounded-lg">
-              <div className="text-white">Loading form...</div>
+              <div className="text-white"></div>
             </div>
           )}
 
@@ -47,9 +51,7 @@ export default function ContactPage() {
               role="button"
               aria-label="Activate form"
               onClick={() => setIsInteractive(true)}
-            >
-              
-            </div>
+            ></div>
           )}
 
           {isInteractive && (
@@ -58,9 +60,7 @@ export default function ContactPage() {
               onClick={() => setIsInteractive(false)}
               className="absolute z-10 bottom-3 right-3 text-xs text-neutral-300   px-3 py-1 rounded hover:bg-neutral-800"
               aria-label="Exit form interaction"
-            >
-              
-            </button>
+            ></button>
           )}
 
           <iframe

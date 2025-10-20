@@ -1,6 +1,6 @@
 "use client";
 
-import { hostGrotesk, martianMono } from "@/app/layout";
+import { hostGrotesk, martianMono } from "@/app/fonts";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";

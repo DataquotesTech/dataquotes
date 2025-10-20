@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { hostGrotesk } from "@/app/layout";
+import { hostGrotesk } from "@/app/fonts";
 
 const PhotoCard = ({ title, description, image, position, border }) => {
   return (

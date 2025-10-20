@@ -1,7 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { hostGrotesk, martianMono } from "@/app/layout";
+import { martianMono } from "@/app/fonts";
 import {
   Si1Dot1Dot1Dot1,
   Si30Secondsofcode,
@@ -19,7 +18,6 @@ import {
 } from "react-icons/si";
 import { SiWipro } from "react-icons/si";
 import { AnimatedGradientText } from "../Ui/animated-gradient-text";
-import Link from "next/link";
 
 const Compaines = () => {
   return (

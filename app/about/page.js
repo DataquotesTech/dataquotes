@@ -1,6 +1,6 @@
 "use client";
 
-import { hostGrotesk, martianMono } from "../layout";
+import { hostGrotesk, martianMono } from "../fonts";
 import { AnimatedGradientText } from "@/components/Ui/animated-gradient-text";
 import AnimatedText from "@/components/common/AnimatedText";
 import PhotoCard from "@/components/common/PhotoCard";
@@ -25,12 +25,10 @@ export default function About() {
           />
           <div className="pt-4 flex gap-5 text-xl items-center justify-center ">
             <Link
-            href="/edtech/courses"
-            className="bg-neutral-900 p-3 rounded text-neutral-300 border border-neutral-800 hover:scale-102 hover:bg-neutral-800 transition-all duration-300">
-            
-                <span className="text-blue-700">*</span> Explore
-                Courses
-             
+              href="/edtech/courses"
+              className="bg-neutral-900 p-3 rounded text-neutral-300 border border-neutral-800 hover:scale-102 hover:bg-neutral-800 transition-all duration-300"
+            >
+              <span className="text-blue-700">*</span> Explore Courses
             </Link>
             <a
               href="#contact"

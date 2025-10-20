@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { martianMono } from "../../app/layout";
+import { martianMono } from "../../app/fonts";
 import { RainbowButton } from "../Ui/rainbow-button";
 
 const Header = () => {

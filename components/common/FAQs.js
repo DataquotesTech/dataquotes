@@ -1,6 +1,6 @@
 "use client";
 
-import { hostGrotesk, martianMono } from "@/app/layout";
+import { hostGrotesk, martianMono } from "@/app/fonts";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
@@ -84,8 +84,8 @@ const FAQs = () => {
             viewport={{ once: true }}
             className={`text-md text-neutral-400 ${hostGrotesk.className}`}
           >
-            Got questions? We&apos;ve got answers. Find everything you need to know
-            about our courses and programs.
+            Got questions? We&apos;ve got answers. Find everything you need to
+            know about our courses and programs.
           </motion.p>
         </div>
 
