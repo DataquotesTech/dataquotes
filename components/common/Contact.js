@@ -23,12 +23,12 @@ export default function ContactPage() {
   return (
     <div
       id="contact"
-      className="h-200 flex justify-center items-center pt-45 bg-black"
+      className="h-200 flex justify-center items-center pt-45 bg-black p-5"
     >
       <div className="w-full max-w-4xl">
         <div className="text-center pb-9">
           <h1
-            className={`text-4xl font-bold text-neutral-100 ${martianMono.className} `}
+            className={`md:text-4xl font-bold text-neutral-100 ${martianMono.className} `}
           >
             Still Confused?{" "}
           </h1>

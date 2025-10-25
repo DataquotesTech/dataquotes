@@ -64,16 +64,16 @@ const FAQs = () => {
   };
 
   return (
-    <section className="py-16 px-4 bg-black">
+    <section className="py-12 sm:py-16  bg-black">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 sm:mb-12">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className={`text-4xl md:text-4xl  text-neutral-400 mb-4 ${martianMono.className}`}
+            className={` sm:text-3xl md:text-4xl text-neutral-400 mb-3 sm:mb-4 ${martianMono.className}`}
           >
             Frequently Asked Questions (FAQ&apos;s)
           </motion.h2>
@@ -82,7 +82,7 @@ const FAQs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className={`text-md text-neutral-400 ${hostGrotesk.className}`}
+            className={`text-xs sm:text-md text-neutral-400 ${hostGrotesk.className}`}
           >
             Got questions? We&apos;ve got answers. Find everything you need to
             know about our courses and programs.
@@ -102,12 +102,12 @@ const FAQs = () => {
             >
               <motion.button
                 onClick={() => toggleFAQ(faq.id)}
-                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-neutral-800/50 transition-colors duration-200"
+                className="w-full px-4 sm:px-6 py-3 sm:py-4 text-left flex justify-between items-center hover:bg-neutral-800/50 transition-colors duration-200"
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.99 }}
               >
                 <h3
-                  className={`text-lg font-semibold text-white ${hostGrotesk.className}`}
+                  className={`text-base sm:text-lg font-semibold text-neutral-400 ${hostGrotesk.className}`}
                 >
                   {faq.question}
                 </h3>
@@ -143,9 +143,9 @@ const FAQs = () => {
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <div className="px-6 pb-4">
+                    <div className="px-4 sm:px-6 pb-3 sm:pb-4">
                       <p
-                        className={`text-neutral-300 leading-relaxed ${hostGrotesk.className}`}
+                        className={`text-neutral-400 leading-relaxed text-sm sm:text-base ${hostGrotesk.className}`}
                       >
                         {faq.answer}
                       </p>

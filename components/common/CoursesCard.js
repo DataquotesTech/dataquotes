@@ -10,7 +10,7 @@ const coursesData = [
     title: "Data Analytics",
     description:
       "Master the art of data analysis and visualization to uncover business insights and drive strategic decisions.",
-    image: "/peter.jpg",
+    image: "/data-analytics.webp",
     skills: ["SQL", "Python", "Excel", "Power BI", "Adv BI"],
     link: "/edtech/courses/data-analytics",
     color: "blue",
@@ -20,7 +20,7 @@ const coursesData = [
     title: "Python Full Stack",
     description:
       "Build scalable web applications from frontend to backend using Python, Django, and React with industry best practices.",
-    image: "/peter.jpg",
+    image: "/python.png",
     skills: ["Python", "Django", "React", "PostgreSQL", "Docker"],
     link: "/edtech/courses/python-full-stack-development",
     color: "blue",
@@ -30,7 +30,7 @@ const coursesData = [
     title: "Data Science",
     description:
       "Transform raw data into actionable insights and drive business decisions with cutting-edge data science techniques.",
-    image: "/peter.jpg",
+    image: "/data-science.webp",
     skills: ["Python", "Pandas", "Machine Learning", "SQL", "Statistics"],
     link: "/edtech/courses/data-science",
     color: "purple",
@@ -39,8 +39,8 @@ const coursesData = [
 
 const SquishyCard = () => {
   return (
-    <section className="px-13 py-12">
-      <div className="mx-auto  grid grid-cols-1 md:grid-cols-3 gap-8">
+    <section className=" sm:px-6 md:px-8 lg:px-13 py-8 sm:py-12">
+      <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {coursesData.map((course) => (
           <Card key={course.id} course={course} />
         ))}
@@ -88,24 +88,24 @@ const Card = ({ course }) => {
             duration: 0.4,
             ease: "easeOut",
           }}
-          className="my-2 block origin-top-left font-mono text-6xl font-black leading-[1.2] px-3"
+          className="my-2 block origin-top-left font-mono text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-[1.2] px-3"
         >
-          <h1 className="text-3xl">{course.title}</h1>
+          <h1 className="text-xl sm:text-2xl md:text-3xl">{course.title}</h1>
         </motion.span>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-3 sm:gap-4">
           <p
-            className={`text-sm ${hostGrotesk.className} px-3 mb-2 text-neutral-400`}
+            className={`text-xs sm:text-sm ${hostGrotesk.className} px-3 mb-2 text-neutral-400`}
           >
             {course.description}
           </p>
           <div
-            className={`text-sm ${hostGrotesk.className} flex flex-wrap gap-1 px-3 text-neutral-400 `}
+            className={`text-xs sm:text-sm ${hostGrotesk.className} flex flex-wrap gap-1 px-3 text-neutral-400 `}
           >
             What You Learn:{" "}
             {course.skills.map((skill, index) => (
               <span
                 key={index}
-                className="bg-neutral-600/40 px-2 rounded-full text-neutral-400"
+                className="bg-neutral-600/40 px-1 sm:px-2 rounded-full text-neutral-400 text-xs"
               >
                 {skill}
               </span>
@@ -115,7 +115,7 @@ const Card = ({ course }) => {
       </div>
       <Link href={course.link}>
         <button
-          className={`${hostGrotesk.className} absolute bottom-4 left-4 right-4 z-20 rounded border-2 border-white bg-white py-2 text-center font-mono font-black uppercase text-neutral-800 backdrop-blur transition-colors hover:bg-white/30 hover:text-white`}
+          className={`${hostGrotesk.className} absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 z-20 rounded border-2 border-white bg-white py-1.5 sm:py-2 text-center font-mono font-black uppercase text-neutral-800 backdrop-blur transition-colors hover:bg-white/30 hover:text-white text-xs sm:text-sm`}
         >
           View Details
         </button>
