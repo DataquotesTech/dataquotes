@@ -12,32 +12,24 @@ const AnimatedText = ({ text, className = "" }) => {
     offset: ["start end", "end 60%"],
   });
 
+  // Create transforms for each word before rendering
+  const wordOpacities = words.map((_, index) => {
+    const wordStart = index / words.length;
+    const wordEnd = (index + 1) / words.length;
+    return useTransform(scrollYProgress, [wordStart, wordEnd], [0.2, 0.8]);
+  });
+
   return (
     <div ref={ref} className={className}>
-      {words.map((word, index) => {
-        // Calculate progress for each word based on scroll position
-        const wordProgress = useTransform(scrollYProgress, [0, 1], [0, 5]);
-
-        // Each word starts animating at different scroll positions
-        const wordStart = index / words.length;
-        const wordEnd = (index + 1) / words.length;
-
-        const wordOpacity = useTransform(
-          scrollYProgress,
-          [wordStart, wordEnd],
-          [0.2, 0.8]
-        );
-
-        return (
-          <motion.span
-            key={index}
-            style={{ opacity: wordOpacity }}
-            className="inline-block mr-2"
-          >
-            {word}
-          </motion.span>
-        );
-      })}
+      {words.map((word, index) => (
+        <motion.span
+          key={index}
+          style={{ opacity: wordOpacities[index] }}
+          className="inline-block mr-2"
+        >
+          {word}
+        </motion.span>
+      ))}
     </div>
   );
 };
