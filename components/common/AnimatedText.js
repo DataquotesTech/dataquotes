@@ -3,21 +3,17 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-/**
- * Per-word component — hooks are called here (allowed)
- */
 const Word = ({ word, index, total, scrollYProgress }) => {
   const wordStart = index / total;
   const wordEnd = (index + 1) / total;
 
-  const opacity = useTransform(scrollYProgress, [wordStart, wordEnd], [0.2, 0.95]);
-  const y = useTransform(scrollYProgress, [wordStart, wordEnd], [18, 0]);
+  // Only opacity change based on scroll
+  const opacity = useTransform(scrollYProgress, [wordStart, wordEnd], [0.2, 1]);
 
   return (
     <motion.span
-      style={{ opacity, y }}
+      style={{ opacity }}
       className="inline-block mr-2"
-      aria-hidden={false}
     >
       {word}
     </motion.span>
@@ -26,7 +22,7 @@ const Word = ({ word, index, total, scrollYProgress }) => {
 
 const AnimatedText = ({ text, className = "" }) => {
   const ref = useRef(null);
-  const words = text.split(" ").filter(Boolean); // avoid empty words
+  const words = text.split(" ").filter(Boolean);
 
   const { scrollYProgress } = useScroll({
     target: ref,
