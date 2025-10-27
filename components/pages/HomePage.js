@@ -218,7 +218,7 @@ Our mission is to make business growth simple with the right mix of tech, design
         <div
           className={`flex flex-col items-center justify-center ${martianMono.className} `}
         >
-          <h1 className="text-neutral-300/70 font-bold text-2xl sm:text-3xl md:text-4xl text-center ">
+          <h1 className="text-neutral-300/70 font-bold text-2xl sm:text-3xl md:text-5xl text-center ">
             <AnimatedGradientText>Course Benifits</AnimatedGradientText>
           </h1>
           <CourseHighlights />

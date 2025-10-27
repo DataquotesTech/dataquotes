@@ -33,7 +33,7 @@ export default function Footer() {
                   <div className="text-neutral-400 py-4 sm:py-6 md:py-8 lg:py-10 flex flex-col gap-2 sm:gap-3">
                     <p className="flex items-center justify-start gap-2 text-sm sm:text-base">
                       <FaPhoneAlt className="text-sm sm:text-base" />
-                      +91 78975 12765
+                      +91 81428 21020
                     </p>
                     <p className="flex items-center justify-start gap-2 text-sm sm:text-base">
                       <MdEmail className="text-sm sm:text-base" />
