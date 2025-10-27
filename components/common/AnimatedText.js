@@ -3,32 +3,46 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
+/**
+ * Per-word component — hooks are called here (allowed)
+ */
+const Word = ({ word, index, total, scrollYProgress }) => {
+  const wordStart = index / total;
+  const wordEnd = (index + 1) / total;
+
+  const opacity = useTransform(scrollYProgress, [wordStart, wordEnd], [0.2, 0.95]);
+  const y = useTransform(scrollYProgress, [wordStart, wordEnd], [18, 0]);
+
+  return (
+    <motion.span
+      style={{ opacity, y }}
+      className="inline-block mr-2"
+      aria-hidden={false}
+    >
+      {word}
+    </motion.span>
+  );
+};
+
 const AnimatedText = ({ text, className = "" }) => {
   const ref = useRef(null);
-  const words = text.split(" ");
+  const words = text.split(" ").filter(Boolean); // avoid empty words
 
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end 60%"],
   });
 
-  // Create transforms for each word before rendering
-  const wordOpacities = words.map((_, index) => {
-    const wordStart = index / words.length;
-    const wordEnd = (index + 1) / words.length;
-    return useTransform(scrollYProgress, [wordStart, wordEnd], [0.2, 0.8]);
-  });
-
   return (
     <div ref={ref} className={className}>
       {words.map((word, index) => (
-        <motion.span
+        <Word
           key={index}
-          style={{ opacity: wordOpacities[index] }}
-          className="inline-block mr-2"
-        >
-          {word}
-        </motion.span>
+          word={word}
+          index={index}
+          total={words.length}
+          scrollYProgress={scrollYProgress}
+        />
       ))}
     </div>
   );
