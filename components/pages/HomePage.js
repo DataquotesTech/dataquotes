@@ -155,23 +155,24 @@ const HomePage = memo(function HomePage() {
             <PhotoCard
               position="left"
               title="VISION"
-              description="Smart Growth, Smarter Future
-We help businesses grow through tech-driven strategies that are scalable and sustainable."
+              description="To create a world where learning is joyful, accessible, and driven by innovation - empowering every learner to grow with confidence and curiosity.
+"
               image="/vision.webp"
               border="ok"
             />
             <PhotoCard
               position="right"
               title="MISSION"
-              description="Simplifying Success
-Our mission is to make business growth simple with the right mix of tech, design, and automation."
+              description="Our mission is to make quality education easy to access and exciting to explore - blending technology, creativity, and real-world skills to prepare learners for tomorrow.
+.
+"
               image="/mission.webp"
               border="ok"
             />
             <PhotoCard
               position="left"
               title="CORE VALUES"
-              description="Integrity, Excellence, Innovation, Collaboration, and Customer Focus. These are the values that guide our work and our relationships with our clients and partners. "
+              description="We believe in nurturing curious minds, inspiring creative thinking, and building a culture of continuous learning. With honesty, care, and collaboration at our core, we aim to make education a journey of discovery for every learner."
               image="/core-vaules.png"
               border="no"
             />
@@ -198,7 +199,7 @@ Our mission is to make business growth simple with the right mix of tech, design
           className={`flex flex-col max-w-6xl text-white text-center  sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl gap-4 sm:gap-6 py-6 pb-45`}
         >
           <AnimatedText
-            text='"At DataQuotes, we help your business grow. Whether you’re a startup or an established brand, we make tech simple, guide your strategy, and help you move ahead with confidence. Choose us for a team that truly cares about your success."'
+            text='"At DataQuotes, learning begins with curiosity and grows into confidence. We make education simple, joyful, and purposeful, because every curious mind we guide today becomes a changemaker of tomorrow."'
             className={`${hostGrotesk.className} text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl`}
           />
           <div className="w-full flex justify-end">
@@ -212,6 +213,7 @@ Our mission is to make business growth simple with the right mix of tech, design
                 {" "}
                 ( ceo & founder of DataQuotes. )
               </h3>
+              
             </div>
           </div>
         </div>

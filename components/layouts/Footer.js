@@ -151,6 +151,15 @@ export default function Footer() {
                       <span className="text-xs sm:text-sm">/dq_edtech</span>
                     </a>
                     <a
+                      href="https://www.instagram.com/dq_techglobal/"
+                      className="relative text-white/60 hover:text-white transition-colors duration-200 flex items-center gap-2"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaSquareInstagram className="text-sm sm:text-base" />
+                      <span className="text-xs sm:text-sm">/dq_techglobal</span>
+                    </a>
+                    <a
                       href="https://in.linkedin.com/company/dqedutech"
                       className="relative text-white/60 hover:text-white transition-colors duration-200 flex items-center gap-2"
                       target="_blank"

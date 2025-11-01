@@ -29,19 +29,19 @@ const Header = () => {
               <div
                 className={`${martianMono.className} text-neutral-400 md:text-2xl  font-medium flex items-center gap-2 md:gap-4 justify-center`}
               >
-                <div className={`flex items-center justify-center tracking-tighter ${inter.className}`}>
-                  <span className="text-red-500/70 tracking-wide font-bold  ">
+                <div className={`flex items-center justify-center ${inter.className}`}>
+                  <span className="text-red-500/70 tracking-widest font-bold scale-104  ">
                     &lt;D
                   </span>
-                  <span className="text-neutral-400/70 font-semibold">
+                  <span className="text-neutral-200/90 ">
                     Q
                     <span className="text-red-500/70 font-bold ">
                       /&gt;
                     </span>
                   </span>
                 </div>
-                <span className={`${inter.className} font-semibold`}>
-                  DataQuotes
+                <span className={`${inter.className}  text-neutral-200/90`}>
+                  Dat<span className="tracking-widest">aQuo</span><span className="relative right-0.5">tes</span>
                   {/* <Image
                     src="/dataquotes-logo.svg"
                     alt="logo"
