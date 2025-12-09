@@ -126,7 +126,7 @@ const HomePage = memo(function HomePage() {
             </div>
             <div className="absolute h-16 w-32 sm:h-20 sm:w-40 left-1 bottom-1 text-2xl sm:text-3xl tracking-wider hidden lg:flex items-center justify-center gap-2 sm:gap-3">
               <a
-                href="mailto:info@dataQuotes.net"
+                href="mailto:info@dataquotes.net"
                 className="relative  text-white/60 hover:text-white transition-colors duration-200 "
                 target="_blank"
                 rel="noopener noreferrer"
