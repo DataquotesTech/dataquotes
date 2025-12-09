@@ -37,7 +37,7 @@ export default function Footer() {
                     </p>
                     <p className="flex items-center justify-start gap-2 text-sm sm:text-base">
                       <MdEmail className="text-sm sm:text-base" />
-                      info@dataquotes.net
+                      hello@dataquotes.net
                     </p>
                   </div>
                 </div>
