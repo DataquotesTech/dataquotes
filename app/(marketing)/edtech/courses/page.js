@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatedGradientText } from "@/components/Ui/animated-gradient-text";
-import { hostGrotesk, martianMono } from "../../fonts";
+import { hostGrotesk, martianMono } from "@/app/fonts";
 import SquishyCard from "@/components/common/CoursesCard";
 
 import Compaines from "@/components/common/Compaines";

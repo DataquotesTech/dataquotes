@@ -1,6 +1,6 @@
 "use client";
 
-import { hostGrotesk, martianMono } from "../fonts";
+import { hostGrotesk, martianMono } from "@/app/fonts";
 import { AnimatedGradientText } from "@/components/Ui/animated-gradient-text";
 import AnimatedText from "@/components/common/AnimatedText";
 import PhotoCard from "@/components/common/PhotoCard";

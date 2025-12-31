@@ -97,14 +97,20 @@ export default function Dock() {
           isVisible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
         }`}
       >
-        <div className="bg-neutral-700/20 backdrop-blur-lg rounded-2xl px-1 py-1 border-2 border-neutral-800/30 backdrop-grayscale-25 relative overflow-hidden">
+        <div
+          className={`backdrop-blur-lg rounded-2xl px-1 py-1 border-2 backdrop-grayscale-25 relative overflow-hidden transition-colors duration-300 ${
+            page === "it-service"
+              ? "bg-white/40 border-neutral-200/50 "
+              : "bg-neutral-700/20 border-neutral-800/30"
+          }`}
+        >
           <div
-            className={`absolute top-1 bottom-1 rounded-lg bg-neutral-500/10 shadow-lg transition-all duration-300 ease-out ${
+            className={`absolute top-1 bottom-1 rounded-lg transition-all duration-300 ease-out ${
               page === "edtech"
-                ? "left-1.5 w-[calc(30%-0.125rem)]"
+                ? "left-1.5 w-[calc(30%-0.125rem)] bg-neutral-500/10"
                 : page === "it-service"
-                ? "left-[calc(36%-0.125rem)] w-[calc(32%-0.125rem)]"
-                : "left-[calc(68%-0.125rem)] w-[calc(32%-0.125rem)]"
+                ? "left-[calc(36%-0.125rem)] w-[calc(32%-0.125rem)] bg-black/5"
+                : "left-[calc(68%-0.125rem)] w-[calc(32%-0.125rem)] bg-neutral-500/10"
             }`}
           />
 
@@ -116,7 +122,11 @@ export default function Dock() {
                 martianMono.className
               } ${
                 page === "edtech"
-                  ? "text-white"
+                  ? page === "it-service"
+                    ? "text-black"
+                    : "text-white"
+                  : page === "it-service"
+                  ? "text-neutral-500 hover:text-black"
                   : "text-neutral-300 hover:text-neutral-500"
               }`}
               prefetch={true}
@@ -130,7 +140,7 @@ export default function Dock() {
                 martianMono.className
               } ${
                 page === "it-service"
-                  ? "text-white"
+                  ? "text-black"
                   : "text-neutral-300 hover:text-neutral-500"
               }`}
               prefetch={true}
@@ -144,7 +154,11 @@ export default function Dock() {
                 martianMono.className
               } ${
                 page === "dq-kids"
-                  ? "text-white"
+                  ? page === "it-service"
+                    ? "text-black"
+                    : "text-white"
+                  : page === "it-service"
+                  ? "text-neutral-500 hover:text-black"
                   : "text-neutral-300 hover:text-neutral-500"
               }`}
               prefetch={true}
@@ -160,10 +174,18 @@ export default function Dock() {
           isVisible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
         }`}
       >
-        <div className="bg-neutral-700/20 backdrop-blur-lg rounded px-4 py-2 border-2 border-neutral-800/30 backdrop-grayscale-25 relative">
+        <div
+          className={`backdrop-blur-lg rounded px-4 py-2 border-2 backdrop-grayscale-25 relative transition-colors duration-300 ${
+            page === "it-service"
+              ? "bg-white/40 border-neutral-200/50"
+              : "bg-neutral-700/20 border-neutral-800/30"
+          }`}
+        >
           <button
             onClick={toggleMobileMenu}
-            className="mobile-menu-button flex items-center gap-6 text-white/70"
+            className={`mobile-menu-button flex items-center gap-6 ${
+              page === "it-service" ? "text-black/70" : "text-white/70"
+            }`}
           >
             <span className={`text-xs ${martianMono.className}`}>
               {page === "edtech"
@@ -174,19 +196,19 @@ export default function Dock() {
             </span>
             <div className="flex flex-col gap-1">
               <span
-                className={`block w-4 h-0.5 bg-white/35 transition-all duration-300 ${
-                  isMobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
-                }`}
+                className={`block w-4 h-0.5 transition-all duration-300 ${
+                  page === "it-service" ? "bg-black/35" : "bg-white/35"
+                } ${isMobileMenuOpen ? "rotate-45 translate-y-1.5" : ""}`}
               ></span>
               <span
-                className={`block w-4 h-0.5 bg-white/35 transition-all duration-300 ${
-                  isMobileMenuOpen ? "opacity-0" : ""
-                }`}
+                className={`block w-4 h-0.5 transition-all duration-300 ${
+                  page === "it-service" ? "bg-black/35" : "bg-white/35"
+                } ${isMobileMenuOpen ? "opacity-0" : ""}`}
               ></span>
               <span
-                className={`block w-4 h-0.5 bg-white/35 transition-all duration-300 ${
-                  isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
-                }`}
+                className={`block w-4 h-0.5 transition-all duration-300 ${
+                  page === "it-service" ? "bg-black/35" : "bg-white/35"
+                } ${isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""}`}
               ></span>
             </div>
           </button>
@@ -195,7 +217,13 @@ export default function Dock() {
 
       {isMobileMenuOpen && (
         <div className="lg:hidden fixed bottom-16 left-1/2 transform -translate-x-1/2 z-100">
-          <div className="mobile-menu-container bg-neutral-800/30 backdrop-blur-lg rounded px-2 py-1 border-2 border-neutral-800/80 backdrop-grayscale-25">
+          <div
+            className={`backdrop-blur-lg rounded px-2 py-1 border-2 backdrop-grayscale-25 ${
+              page === "it-service"
+                ? "bg-white/80 border-neutral-200/80"
+                : "bg-neutral-800/30 border-neutral-800/80"
+            }`}
+          >
             <div className="flex flex-col gap-1">
               <Link
                 href="/"
@@ -204,7 +232,11 @@ export default function Dock() {
                   martianMono.className
                 } ${
                   page === "edtech"
-                    ? "text-white/70 bg-neutral-500/30"
+                    ? page === "it-service"
+                      ? "text-black bg-black/5"
+                      : "text-white/70 bg-neutral-500/30"
+                    : page === "it-service"
+                    ? "text-neutral-500 hover:text-black hover:bg-black/5"
                     : "text-neutral-300 hover:text-white hover:bg-neutral-500/20"
                 }`}
                 prefetch={true}
@@ -218,7 +250,7 @@ export default function Dock() {
                   martianMono.className
                 } ${
                   page === "it-service"
-                    ? "text-white/70 bg-neutral-500/30"
+                    ? "text-black bg-black/5"
                     : "text-neutral-300 hover:text-white hover:bg-neutral-500/20"
                 }`}
                 prefetch={true}
@@ -232,7 +264,11 @@ export default function Dock() {
                   martianMono.className
                 } ${
                   page === "dq-kids"
-                    ? "text-white/70 bg-neutral-500/30"
+                    ? page === "it-service"
+                      ? "text-black bg-black/5"
+                      : "text-white/70 bg-neutral-500/30"
+                    : page === "it-service"
+                    ? "text-neutral-500 hover:text-black hover:bg-black/5"
                     : "text-neutral-300 hover:text-white hover:bg-neutral-500/20"
                 }`}
                 prefetch={true}

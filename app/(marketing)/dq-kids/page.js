@@ -1,6 +1,6 @@
-import { hostGrotesk, martianMono } from "../fonts";
+import { hostGrotesk, martianMono } from "@/app/fonts";
 
-export default function ITServices() {
+export default function DQKids() {
   return (
     <div className="fixed h-screen w-screen z-90 flex items-center justify-center overflow-hidden text-neutral-300">
       <div className="relative h-full w-full bg-[#000000]">
@@ -15,14 +15,14 @@ export default function ITServices() {
             <h1
               className={`${martianMono.className} text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-center`}
             >
-              IT Services
+              DQ Kids
             </h1>
             <p
               className={`${hostGrotesk.className} text-xs sm:text-base text-center max-w-2xl`}
             >
-              We provide a wide range of IT services to our clients. We are a
-              team of experienced professionals who are dedicated to providing
-              the best possible service to our clients.
+              We teach kids coding and programming. We are a team of experienced
+              teaching educators who are dedicated to providing the best
+              possible service to our clients.
             </p>
           </div>
         </div>

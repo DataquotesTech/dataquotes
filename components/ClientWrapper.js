@@ -15,7 +15,7 @@ const ScrollRestoration = dynamic(() => import("./common/ScrollRestoration"), {
   ssr: false,
 });
 const LenisProvider = dynamic(() => import("./common/LenisProvider"), {
-  ssr: false,
+  ssr: true,
 });
 const ContactPage = dynamic(() => import("./common/Contact"), {
   ssr: false,
