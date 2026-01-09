@@ -8,7 +8,12 @@ import { hostGrotesk, martianMono } from "../../app/fonts";
 import ContactPage from "../common/Contact";
 import { IoLogoLinkedin } from "react-icons/io5";
 
+import { usePathname } from "next/navigation";
+
 export default function Footer() {
+  const pathname = usePathname();
+  const isITServices = pathname?.includes("/it-services");
+
   return (
     <div className="relative flex items-center justify-center overflow-hidden bg-white border-t border-neutral-200">
       <div className="relative h-full max-w-7xl px-4 sm:px-6 md:px-8 py-10 sm:py-6 md:py-8 flex flex-col items-center justify-center">
@@ -25,8 +30,9 @@ export default function Footer() {
                 DataQuotes
               </h2>
               <p className="text-xs sm:text-sm md:text-base max-w-full lg:max-w-2/3 text-neutral-600 mb-4 sm:mb-6">
-                Learn what matters to get hired. We train you what the
-                company demands - Nothing less.
+                {isITServices
+                  ? "Transforming your business with cutting-edge IT solutions and digital innovation."
+                  : "Learn what matters to get hired. We train you what the company demands - Nothing less."}
               </p>
               <div className="text-neutral-500 py-4 sm:py-6 md:py-8 lg:py-10 flex flex-col gap-2 sm:gap-3">
                 <p className="flex items-center justify-start gap-2 text-sm sm:text-base">
@@ -173,7 +179,7 @@ export default function Footer() {
             <div
               className={`border-t-1 p-2 sm:p-3 flex flex-row items-center justify-between text-neutral-500 border-neutral-200 ${martianMono.className} text-xs sm:text-sm gap-2 sm:gap-0`}
             >
-              <h3>&copy;2025 DataQuotes</h3>
+              <h3>&copy;2026 DataQuotes</h3>
               <h3 className="hidden lg:block">All Rights Reserved</h3>
               <Link
                 href="/"

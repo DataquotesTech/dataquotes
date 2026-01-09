@@ -33,7 +33,8 @@ export default function ContactUs() {
           {/* Right Column - Action */}
           <div className="flex-1 flex flex-col justify-center h-full pt-10 md:pt-20">
             <a 
-              href="mailto:koushikyerraguntla@gmail.com?subject=New%20Inquiry&body=Hi%20DataQuotes%20Team%2C%0D%0A%0D%0AI%27d%20like%20to%20discuss%20a%20project..."
+              href="https://tally.so/r/ja6jX6"
+              target="_blank"
               className="group flex flex-col md:flex-row md:items-center gap-4 md:gap-6"
             >
               <span className="text-4xl sm:text-5xl md:text-6xl font-black uppercase tracking-tight hover:text-red-500 transition-colors underline decoration-4 underline-offset-8">

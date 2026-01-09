@@ -101,7 +101,7 @@ export default function Services() {
               
               <div className="grid grid-cols-1 md:grid-cols-4 border border-black divide-y md:divide-y-0 md:divide-x divide-black bg-neutral-100 uppercase text-[10px] md:text-[13px] font-black">
                 {service.benefits.map((benefit, bIndex) => (
-                  <div key={bIndex} className="p-4 md:p-6 flex items-center min-h-[50px]">
+                  <div key={bIndex} className="p-4 md:p-6 flex items-center min-h-[50px] hover:bg-black hover:text-white cursor-pointer transition-colors duration-500">
                     {benefit}
                   </div>
                 ))}
