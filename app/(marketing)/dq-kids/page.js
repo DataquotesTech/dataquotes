@@ -20,7 +20,7 @@ export default function DQKids() {
             <p
               className={`${hostGrotesk.className} text-xs sm:text-base text-center max-w-2xl`}
             >
-              We teach kids coding and programming. We are a team of experienced
+              We Teach kids coding and programming. We are a team of experienced
               teaching educators who are dedicated to providing the best
               possible service to our clients.
             </p>
