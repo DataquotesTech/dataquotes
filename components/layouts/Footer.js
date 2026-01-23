@@ -175,7 +175,7 @@ export default function Footer() {
                 <div
                   className={`border-t-1 p-2 sm:p-3 flex flex-row items-center justify-between text-neutral-400 border-neutral-600 ${martianMono.className} text-xs sm:text-sm gap-2 sm:gap-0`}
                 >
-                  <h3>&copy;2025 DataQuotes</h3>
+                  <h3>&copy;2026 DataQuotes</h3>
                   <h3 className="hidden lg:block">All Rights Reserved</h3>
                   <Link
                     href="/"
